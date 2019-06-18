@@ -1,0 +1,8 @@
+form(action=`/employees/${employee._id}?_method=PUT` method="POST")
+  input(type="text" name="name" placeholder="Enter Name" value=employee.name)
+  input(type="number" name="age" placeholder="Enter Age" value=employee.age)
+  input(type="text" name="username" placeholder="Enter Username" value=employee.username)
+  input(type="password" name="password" placeholder="Enter Password" value=employee.password)
+  button(type="submit") Submit
+div
+  a(href=`/employees/${employee._id}`) Go back

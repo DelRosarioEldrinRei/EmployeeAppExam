@@ -1,0 +1,21 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    meta(http-equiv="X-UA-Compatible", content="ie=edge")
+    title Document
+  body
+    table
+      th name
+      th age
+      th username
+      tr
+        td=employee.name
+        td=employee.age
+        td=employee.username
+    a(href=`/employees/${employee._id}/edit`) Edit Employee
+    span &nbsp;&nbsp;&nbsp;
+    form(action=`/employees/${employee._id}?_method=DELETE` method="POST")
+      button delete
+    a(href="/employees") Go back
